@@ -27,10 +27,10 @@ public class LargestHourglassSum {
             for (int column = 0; column < array[0].length - 2; column++) {
                 for (int i = row; i < row+3; i++) {
                     for (int j = column; j < column+3; j++) {
-                        if (i == 0 && j == 1) {
+                        if (i == 1 && j == 0) {
                             continue;
                         }
-                        if (i == 2 && j == 1) {
+                        if (i == 1 && j == 2) {
                             continue;
                         } else {
                             hourglass1Sum = hourglass1Sum + array[i][j];
