@@ -5,6 +5,7 @@ import java.util.List;
 public class LargestHourglassSum {
     public static void main(String[] args) {
 
+        //ToDO change to List<List<Integer>> arr
         int[][] testCase1 = {
                 {-9, -9, -9,  1, 1, 1},
                 {0, -9,  0,  4, 3, 2},
@@ -18,22 +19,22 @@ public class LargestHourglassSum {
 
     }
 
-    public static void hourglassSum(int[][] array){
+    //ToDo enter into chatGPT to see how to refine for loops
+    public static int hourglassSum(List<List<Integer>> arr){
         List<Integer> list = new ArrayList<>();
         int hourglass1Sum = 0;
-        int indexNumber=0;
 
-        for (int row = 0; row < array.length - 2; row++) {
-            for (int column = 0; column < array[0].length - 2; column++) {
+        for (int row = 0; row < arr.size() - 2; row++) {
+            for (int column = 0; column < arr.get(0).size() - 2; column++) {
                 for (int i = row; i < row+3; i++) {
                     for (int j = column; j < column+3; j++) {
-                        if (i == 1 && j == 0) {
+                        if (i == row+1 && j == column) {
                             continue;
                         }
-                        if (i == 1 && j == 2) {
+                        if (i == row+1 && j == column+2) {
                             continue;
-                        } else {
-                            hourglass1Sum = hourglass1Sum + array[i][j];
+                        }else {
+                            hourglass1Sum = hourglass1Sum + arr.get(i).get(j);
                         }
                     }
                 }
@@ -42,9 +43,8 @@ public class LargestHourglassSum {
             }
         }
 
-        for(int x=0; x < list.size(); x++) {
-            System.out.println("Hourglass " + x + " sum = " + list.get(x));
-        }
+        list.sort(null);
+        return list.get(list.size()-1);
     }
 
     public void arrayTesting(){
