@@ -15,7 +15,7 @@ public class LargestHourglassSum {
                 {0,  0,  1,  2, 4, 0,}
         };
 
-        hourglassSum(testCase1);
+//        hourglassSum(testCase1);
 
     }
 
