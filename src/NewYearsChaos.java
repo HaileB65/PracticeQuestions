@@ -1,28 +1,28 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class NewYearsChaos {
 
-    int testCases = 1;
-    int peopleInQueue = 5;
-    int[] finalStateOfQueue = {2,1,5,3,4};
+    public static void main(String[] args) {
+        int[] array = {2,1,5,3,4};
 
-    //parameters
-//    int testCases, int peopleInQueue ,int[] finalStateOfQueue
+        findMinimumNumberOfBribes(array);
+    }
 
-    public void findMinimumNumberOfBribes(){
-        //find total number of people in queue
-        //start with last index and see how far away largest number is from
-        // it to find the number of bribes
-        int[] array = new int[5];
-        peopleInQueue = 5;
-        int bribes = 0;
+    public static void findMinimumNumberOfBribes(int[] finalStateOfQueue){
+        int totalBribes = 0;
+        List<Integer> peopleWhoBribed = new ArrayList<>();
 
-        for (int i=0; i < 5; i++){
-            if(array[i] < array[i-1]){
-                bribes += 1;
+        for (int i=0; i <= finalStateOfQueue.length-1; i++){
+            if(finalStateOfQueue[finalStateOfQueue.length-1-i] < finalStateOfQueue.length-i){
+                totalBribes += 1;
+                peopleWhoBribed.add(finalStateOfQueue.length - i);
             }
         }
 
-        //go to the second last index and see how far away the 2nd largest number
-        //is from there to find number of bribes.
-
+        System.out.println(totalBribes);
+        System.out.println(peopleWhoBribed);
     }
 }
