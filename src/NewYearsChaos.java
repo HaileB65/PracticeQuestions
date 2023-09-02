@@ -11,16 +11,15 @@ public class NewYearsChaos {
 
     }
 
+    //TODO
+    //Finish findMinimumNumberOfBribes method
+    // find a way to count number 6 being ahead of number for in array2 above.
     public static void findMinimumNumberOfBribes(List<Integer> q){
         int totalBribes = 0;
 
         for (int i=0; i <= q.size()-1; i++){
             int actualNumber = q.get(q.size() - 1 - i);
             int expectedNumber = q.size()-i;
-
-//            if(q.get(i) > q.get(i)){
-//                totalBribes += totalBribes + 1;
-//            }
 
             if(actualNumber > expectedNumber){
                 int bribes = actualNumber-expectedNumber;
