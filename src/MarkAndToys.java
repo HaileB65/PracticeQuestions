@@ -12,34 +12,19 @@ public class MarkAndToys {
         int total = 0;
 
         for (int i = 0; i <= prices.size() - 1; i++) {
-            total = total + prices.get(i);
-
-            if (total >= 7) {
-                numberOfItems = numberOfItems + 1;
+            if(total == k){
                 break;
             }
+
+            if((total + prices.get(i)) > k){
+                break;
+            }
+
+            total = total + prices.get(i);
             numberOfItems = numberOfItems + 1;
         }
 
         System.out.println(total);
         System.out.println(numberOfItems);
-
-        int total2 = 0;
-        int numberOfItems2 = 0;
-        for (int i = 0; i <= prices.size() - 1; i++) {
-            total2 = total2 + prices.get(prices.size() - 1 - i);
-
-            if (total2 == 7) {
-                numberOfItems2 = numberOfItems2 + 1;
-                continue;
-            }
-            if (total2 < 7) {
-                numberOfItems2 = numberOfItems2 + 1;
-            }
-        }
-
-        System.out.println();
-        System.out.println(total2);
-        System.out.println(numberOfItems2);
     }
 }
