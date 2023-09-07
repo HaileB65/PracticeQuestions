@@ -24,7 +24,22 @@ public class MarkAndToys {
             numberOfItems = numberOfItems + 1;
         }
 
-        System.out.println(total);
-        System.out.println(numberOfItems);
+        int total2=0;
+        int numberOfItems2 = 0;
+
+        for (int i = prices.size() - 1; i >= 0 ; i--) {
+            if(total2 == k){
+                break;
+            }
+
+            if((total2 + prices.get(i)) > k){
+                break;
+            }
+
+            total2 = total2 + prices.get(i);
+            numberOfItems2 = numberOfItems2 + 1;
+        }
+
+        System.out.println(Math.max(numberOfItems, numberOfItems2));
     }
 }
