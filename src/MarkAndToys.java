@@ -6,8 +6,14 @@ public class MarkAndToys {
     }
 
     private static void findMaximumNumberOfItems() {
-        List<Integer> prices = List.of(1, 2, 3, 4);
-        int k = 7;
+        //example 1
+//        List<Integer> prices = List.of(1, 2, 3, 4);
+//        int k = 7;
+
+        //example 2
+        List<Integer> prices = List.of(1, 12, 5, 111, 200, 1000, 10);
+        int k = 50;
+
         int numberOfItems = 0;
         int total = 0;
 
