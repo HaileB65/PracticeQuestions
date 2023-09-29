@@ -10,6 +10,9 @@ public class CountTriples {
         System.out.println(count2);
     }
 
+    //TODO
+    // get method to count first number but then skip second number and continue testing the 3rd number
+    // in its place.
     private static int countTriples(List<Integer> arr, long r) {
         int triplesCount = 0;
 

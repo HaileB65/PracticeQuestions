@@ -36,7 +36,7 @@ public class SherlockAndAnagrams {
 //        }
 
         //TODO
-        // break down "ba" string into count "b" by itself
+        // break down "ba" string into string "b" by itself and count it as a anagram pair
         System.out.println();
         for(int i = 1; i < s.length(); i++) {
             String subString = s.substring(i);
