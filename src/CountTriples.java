@@ -29,7 +29,7 @@ public class CountTriples {
                     }
                 }
             }
-            if((arr.get(i)*r) == (arr.get(i+1))){
+            if((arr.get(i)*r) == (arr.get(i+2))){
 
             }
         }
