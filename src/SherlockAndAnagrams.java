@@ -46,7 +46,6 @@ public class SherlockAndAnagrams {
             if (s.contains(flippedSubString)) {
                 anagramPairCount++;
             }
-
         }
 
         return anagramPairCount;
