@@ -3,11 +3,11 @@ import java.util.*;
 public class SherlockAndAnagrams {
 
     public static void main(String[] args) {
-        String a = "mom";
+//        String a = "mom";
         String b ="abba";
-        String c = "abcd";
+//        String c = "abcd";
 
-        System.out.println(numberOfAnagrammaticPairs(a));
+//        System.out.println(numberOfAnagrammaticPairs(a));
         System.out.println(numberOfAnagrammaticPairs(b));
     }
 
@@ -38,25 +38,8 @@ public class SherlockAndAnagrams {
             String subString = s.substring(i);
 
             //TODO
-            // break down "ba" string into string "b" by itself and count it as a anagram pair
-            if(subString.equals("ba")){
-                String firstLetter = subString.substring(2);
-                String secondLetter = subString.substring(1);
-
-                StringBuilder sb = new StringBuilder(firstLetter);
-                sb.reverse();
-                String flippedFistLetter = sb.toString();
-                if (s.contains(flippedFistLetter)) {
-                    anagramPairCount++;
-                }
-
-                StringBuilder sb2 = new StringBuilder(secondLetter);
-                sb.reverse();
-                String flippedSecondLetter = sb.toString();
-                if (s.contains(flippedSecondLetter)) {
-                    anagramPairCount++;
-                }
-            }
+            // break down "ba" string into string "b" by itself and count it as a anagram
+            s.charAt(1);
 
             StringBuilder sb = new StringBuilder(subString);
             sb.reverse();
